@@ -1,0 +1,7 @@
+{
+  "presets": ["env","stage-0"],
+  "plugins": ["transform-runtime",
+    ["import", { "libraryName": "ant-design-vue", "libraryDirectory": "es", "style": true }],
+    "transform-remove-strict-mode"]
+
+}
