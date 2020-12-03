@@ -3,6 +3,7 @@
         <top-view />
         <mid-view />
         <bottom-view />
+        <map-view />
     </div>
 </template>
 
@@ -10,12 +11,14 @@
     import TopView from './components/TopView'
     import MidView from './components/MidView'
     import BottomView from './components/BottomView'
+    import MapView from './components/MapView'
     export default {
         name: "DataV",
         components: {
             TopView,
             MidView,
-            BottomView
+            BottomView,
+            MapView
         }
     }
 </script>
@@ -24,7 +27,7 @@
 .dataV-container {
     min-height: 100%;
     background-color: #f0f2f5;
-    padding: 24px;
+    padding: 24px 24px 0 24px;
     min-width: 320px;
 }
 </style>

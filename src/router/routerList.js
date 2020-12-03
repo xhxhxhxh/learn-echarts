@@ -5,7 +5,7 @@ import AntV from '@/views/antV/AntV';
 import DataV from '@/views/dataV/DataV';
 
 export const constantRouterMap = [
-    { path: '/', redirect: '/home' },
+    { path: '/', redirect: '/dataV' },
     { path: '/home', component: Home },
     { path: '/svg', component: Svg },
     { path: '/AntV', component: AntV },

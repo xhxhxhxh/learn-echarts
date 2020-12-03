@@ -7,15 +7,13 @@ const extractLESS = new ExtractTextWebpackPlugin({filename: 'css/reset.[hash:8].
 const extractCSS = new ExtractTextWebpackPlugin({filename: 'css/awesome.[hash:8].css',allChunks: true});
 const extractLESSOfVue = new ExtractTextWebpackPlugin({filename: 'css/index.[hash:8].css',allChunks: true});
 
-
-
 module.exports = {
     mode: 'production',
     entry: ["babel-polyfill", path.join(__dirname,'./src/index.js')],
     output: {
         path: path.join(__dirname,'./dist'),
         filename: 'js/bundle.[hash:8].js',
-        publicPath: '/'
+        publicPath: './'
     },
     plugins: [
         new htmlWebpackPlugin ({
@@ -45,7 +43,8 @@ module.exports = {
                 test: /\.css$/,
                 use: extractCSS.extract({
                     fallback: "style-loader",
-                    use: "css-loader"
+                    use: "css-loader",
+                    publicPath: './'
                 })
             },
             {
@@ -64,7 +63,8 @@ module.exports = {
                         {
                             loader: 'less-loader', // compiles Less to CSS
                             options: {modifyVars: {'primary-color': '#1890ff'}, javascriptEnabled: true},
-                        }]
+                        }],
+                    publicPath: './'
                 })
             },
             {test: /\.(jpg|png|gif|bmp|jpeg|cur)$/,
@@ -88,11 +88,12 @@ module.exports = {
                         css: extractLESSOfVue.extract({
                             use: 'css-loader',
                             fallback: 'vue-style-loader',
+                            publicPath: './'
                         }),
                         less: extractLESSOfVue.extract({
                             use: ['css-loader','less-loader','postcss-loader'],
                             fallback: 'vue-style-loader',
-                            publicPath: '../'
+                            publicPath: './'
                         })
                     },
                 }
