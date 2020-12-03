@@ -34,7 +34,7 @@ module.exports = {
 
         // 清除dist中的文件
         new CleanWebpackPlugin({
-            cleanOnceBeforeBuildPatterns: ['css/**', 'js/**'],
+            cleanOnceBeforeBuildPatterns: ['css/**', 'js/**', '!js','!js/BrowseDetection.js'],
         }),
     ],
     module: {
