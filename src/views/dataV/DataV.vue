@@ -2,17 +2,20 @@
     <div class="dataV-container">
         <top-view />
         <mid-view />
+        <bottom-view />
     </div>
 </template>
 
 <script>
     import TopView from './components/TopView'
     import MidView from './components/MidView'
+    import BottomView from './components/BottomView'
     export default {
         name: "DataV",
         components: {
             TopView,
-            MidView
+            MidView,
+            BottomView
         }
     }
 </script>

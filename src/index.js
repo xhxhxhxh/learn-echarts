@@ -7,7 +7,7 @@ import store from '@/store';
 import echarts from 'echarts'
 import 'normalize.css';
 import './less/index.less';
-import { ConfigProvider, Drawer, Button, Radio, Row, Col, Card, Tooltip, Icon, Divider, Tabs, DatePicker } from 'ant-design-vue';
+import { ConfigProvider, Drawer, Button, Radio, Row, Col, Card, Tooltip, Icon, Divider, Tabs, DatePicker, Table } from 'ant-design-vue';
 
 Vue.config.productionTip = false;
 axios.defaults.withCredentials = false;
@@ -30,6 +30,7 @@ Vue.use(Icon);
 Vue.use(Divider);
 Vue.use(Tabs);
 Vue.use(DatePicker);
+Vue.use(Table);
 
 Vue.use(VueRouter);
 

@@ -1,13 +1,13 @@
 <template>
-    <div class="accessAmountChart-container">
-        <div class="accessAmountChart" ref="accessAmountChart" style="height: 46px"></div>
+    <div class="countChart-container">
+        <div class="countChart" ref="countChart" style="height: 46px"></div>
     </div>
 </template>
 
 <script>
     import mixins from './mixins'
     export default {
-        name: "AccessAmountChart",
+        name: "countChart",
         mixins: [mixins],
         data () {
             return {
@@ -16,7 +16,7 @@
         },
         methods: {
             initEcharts () {
-                this.chart = this.$echarts.init(this.$refs.accessAmountChart)
+                this.chart = this.$echarts.init(this.$refs.countChart)
             },
             loadChart () {
                 const option = {
@@ -50,21 +50,22 @@
                         data: [620, 432, 220, 534, 790, 432, 220, 534, 790, 432, 220],
                         type: 'line',
                         areaStyle: {
-                            color: 'purple'
+                            color: '#3398db',
+                            opacity: 0.4
                         },
                         smooth: true,
                         lineStyle: {
-                            width: 0
+                            color: '#3398db'
                         },
                         showSymbol: false,
                         itemStyle: {
-                            color: 'purple',
+                            color: '#3398db',
                         },
                         emphasis: {
                             itemStyle: {
                                 opacity: 1,
                                 borderColor: '#fff',
-                                color: 'purple',
+                                color: '#3398db',
                                 borderWidth: 3
                             },
                         }
