@@ -23,6 +23,11 @@
                 </a-row>
             </a-col>
         </a-row>
+        <a-row :gutter="24" >
+            <a-col :xs="24" :sm="24" style="margin-bottom: 24px">
+                <order-chart />
+            </a-col>
+        </a-row>
     </div>
 </template>
 
@@ -30,12 +35,15 @@
     import MapChart from "./MapChart"
     import LiquidfillChart from './LiquidfillChart'
     import WordCloudChart from './WordCloudChart'
+    import OrderChart from './OrderMap'
+
     export default {
         name: "MapView",
         components: {
             MapChart,
             LiquidfillChart,
-            WordCloudChart
+            WordCloudChart,
+            OrderChart
         },
         data () {
             return {
