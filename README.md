@@ -1,10 +1,18 @@
-# 九漫少儿思维
+# learn echarts
 
 ## 介绍
-- 九漫少儿思维PC端官网。
+- 通过仿antd-pro中的dashboard页面学习echars的基本使用。
 
-## 特点
--  老师与学生的直播功能(实时视频互动，画图功能，游戏互动)。
--  登录、注册、修改信息、头像截取功能。
+## 使用
+-  [线上demo](https://xhweb.site/datav/)
+-  本地运行:
+```angular2
+npm install
+npm run dev
+```
+-  打包:
+```angular2
+npm run build
+```
 
 
